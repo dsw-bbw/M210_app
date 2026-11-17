@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
         - name: web-app
-          image: ghcr.io/dsw-bbw/html-openshift-app:latest
+          image: ghcr.io/dsw-bbw/html-openshift-app:v2
           resources: {}
           imagePullPolicy: Always
