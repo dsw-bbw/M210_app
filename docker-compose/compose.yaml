@@ -1,0 +1,9 @@
+services:
+  web-server:
+    build:
+      context: .
+      dockerfile: dockerfiles/Dockerfile.web-server
+    image: web-server
+    ports:
+      - "8080:80"
+    restart: unless-stopped
