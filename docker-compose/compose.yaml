@@ -1,7 +1,7 @@
 services:
   web-server:
     build:
-      context: .
+      context: ..
       dockerfile: dockerfiles/Dockerfile.web-server
     image: web-server
     ports:
