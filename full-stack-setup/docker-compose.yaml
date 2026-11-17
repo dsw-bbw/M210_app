@@ -1,0 +1,25 @@
+services:
+  mongodb:
+    image: mongo:8.3.4
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - backend-net
+
+  backend:
+    build: ./backend
+    networks:
+      - backend-net
+      - frontend-net
+
+  frontend:
+    build: ./frontend
+    networks:
+      - frontend-net
+
+networks:
+  frontend-net:
+  backend-net:
+
+volumes:
+  mongo-data:
